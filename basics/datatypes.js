@@ -9,12 +9,15 @@ let isloggedIn=false
 //null=>standalone value
 //symbol=>unique
 //object
-// console.log(typeof name);
+
+// console.log(typeof name);//string
 // console.log(typeof null)//object
-// let score="33"
-// let valuenumber=Number(score)
-// console.log(valuenumber)
-// console.log(typeof valuenumberde)
+
+//           L6  Datatype conversion
+let score="33"
+let valuenumber=Number(score)
+console.log(valuenumber)
+console.log(typeof valuenumberde)//number
 // let score2="33ab"
 // let valuenumber2=Number(score2)
 // console.log(valuenumber2)
@@ -22,10 +25,14 @@ let isloggedIn=false
 // let score3=true
 // let valuenumber3=Number(score3)
 // console.log(typeof valuenumber3)
-// console.log(score3)
+// console.log(score3)//  1
+
+//"33"=>33
+//"33abc"=>NaN
+//true=>1;false=>0;
 // let Log=1
 // let booleanislog=Boolean(Log)
-// console.log(booleanislog)
+// console.log(booleanislog)=>true
 // console.log(typeof booleanislog)
 //1=>true;0=>false
 //"hitesh"=>true ;  ""=>false

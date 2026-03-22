@@ -14,13 +14,14 @@ console.log(saymyname);
 saymyname()
 
 
-// function addtwo(number1,number2){
-// console.log(number1+number2)
-// }
-// addtwo(33,55);
-// addtwo(22,'a');
-// addtwo(22,null);
-// addtwo(2,'334')
+function addtwo(number1,number2){
+console.log(number1+number2)
+}
+console.log(addtwo(33,55));
+
+console.log(addtwo(22,'a'));
+console.log(addtwo(22,null));
+console.log(addtwo(2,'334'));
 
 function addtwo(number1,number2) {
     let result=number1+number2;
@@ -57,7 +58,7 @@ function calculateprice2(...num1){
 }
 console.log(calculateprice2(200,400,500))
 
-function calculateprice3(val1,val2,...num1)
+function calculateprice3(val1,val2,val3,...num1)
 {
     return num1;
 }

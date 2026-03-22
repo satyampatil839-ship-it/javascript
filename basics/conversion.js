@@ -29,6 +29,7 @@ let stringNumber = String(someNumber)
 
 // *********************** Operations ***********************
 
+
 let value = 3
 let negValue = -value
 // console.log(negValue);
@@ -46,10 +47,10 @@ let str2 = " hitesh"
 let str3 = str1 + str2
 // console.log(str3);
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
+// console.log("1" + 2);=>12
+// console.log(1 + "2");=>12
+// console.log("1" + 2 + 2);=>122
+// console.log(1 + 2 + "2");=>122
 
 // console.log( (3 + 4) * 5 % 3);
 
@@ -62,7 +63,7 @@ num1 = num2 = num3 = 2 + 2
 
 let gameCounter = 100
 ++gameCounter;
-console.log(gameCounter);
+console.log(gameCounter);//101
 
 // link to study
 // https://tc39.es/ecma262/multipage/abstract-operati
