@@ -7,8 +7,8 @@ const myarr2= new Array(77,99,33,55);
 console.log(myarr2[0])
 
 //array methods
-// myarr.push(12)
-// console.log(myarr)
+myarr.push(12)
+console.log(myarr)
 // myarr.pop()//last element will pop up
 // console.log(myarr)
 

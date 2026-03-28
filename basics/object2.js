@@ -1,51 +1,88 @@
-const tinderuser={}
-tinderuser.name="sammy";
-tinderuser.id=7651;
-tinderuser.salary=50;
-const obj1={
-    1:"a",
-    2:"b"
-}
-const obj2={
-    3:"a",
-    4:"b"
-}
-//by using assignmet 
-const returnobject=Object.assign(obj1,obj2)
-// console.log(returnobject)
-// console.log(obj1)
-//by using spread
-const ritya={...obj1,...obj2}
-// console.log(ritya)
+// const tinderUser = new Object()
+const tinderUser = {}
 
-const users=[
-    {
-        id:3,
-        salary:4000
-    },
-    {
-        id:700,
-        salary:8000
-    },
-    {
-        id:4,
-        salary:5000
+tinderUser.id = "123abc"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = false
+
+// console.log(tinderUser);
+
+
+//nesting of objects
+const regularUser = {
+    email: "some@gmail.com",
+    fullname: {
+        userfullname: {
+            firstname: "hitesh",
+            lastname: "choudhary"
+        }
     }
-
-]
-// console.log(users)
-// console.log(users[0].salary)
-console.log(Object.keys(tinderuser))
-console.log(Object.values(tinderuser))
-console.log(tinderuser.hasOwnProperty('salary'))
-
-const course={
-    name:"jshindi",
-    price:"998",
-    courseinstructor:"satyam"
-
 }
-const{courseinstructor}=course
-console.log(courseinstructor)
-const{courseinstructor:instructor}=course
-console.log(instructor)
+
+// console.log(regularUser.fullname.userfullname.firstname);//for access
+//meriging or combining of objects
+
+const obj1 = {1: "a", 2: "b"}
+const obj2 = {3: "a", 4: "b"}
+const obj4 = {5: "a", 6: "b"}
+
+//in this obj3 will contain 
+ const obj3 = { obj1, obj2 }
+ console.log(obj3);
+// const obj3 = Object.assign({}, obj1, obj2, obj4)
+const obj5=Object.assign({},obj1,obj2)
+//here {} is a target object where obj1 and obj2 are source object
+console.log(obj5)
+// const obj3 = {...obj1, ...obj2}
+// console.log(obj3);
+
+
+const users = [
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+    {
+        id: 1,
+        email: "h@gmail.com"
+    },
+]
+
+users[1].email
+console.log(tinderUser);
+
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
