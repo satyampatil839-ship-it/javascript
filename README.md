@@ -1,2 +1,2 @@
-# js-hindi
-code repo for javascript series at chai aur code 
+# javascript
+code repo for javascript
