@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailReserve | Simple Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>RailReserve</h1>
+    </nav>
+
+    <main class="container">
+        <section class="search-box">
+            <h2>Find Your Train</h2>
+            <div class="input-group">
+                <input type="text" id="from" placeholder="From (e.g. Mumbai)">
+                <input type="text" id="to" placeholder="To (e.g. Delhi)">
+                <button onclick="searchTrains()">Search</button>
+            </div>
+        </section>
+
+        <section id="results-section">
+            <h3>Available Trains</h3>
+            <div id="train-list">
+                <p>Enter route to see available trains.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

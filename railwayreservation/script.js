@@ -1,7 +1,6 @@
 // ==========================================
 // MAIN APPLICATION LOGIC
 // ==========================================
-
 // Global State
 let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
 let selectedTrain = null;
