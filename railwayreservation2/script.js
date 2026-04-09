@@ -1,56 +1,14 @@
-// function showSection(section){
 
-// document.getElementById("home").style.display="none";
-// document.getElementById("search").style.display="none";
-// document.getElementById("pnr").style.display="none";
-// document.getElementById("bookings").style.display="none";
-
-// document.getElementById(section).style.display="block";
-
-// }
-
-
-
-// function bookTicket(){
-
-// var from = document.getElementById("from").value;
-// var to = document.getElementById("to").value;
-// var date = document.getElementById("date").value;
-// var train = document.getElementById("train").value;
-
-// var ticket =
-// "<h3>Ticket Confirmed</h3>" +
-// "From: " + from + "<br>" +
-// "To: " + to + "<br>" +
-// "Train: " + train + "<br>" +
-// "Date: " + date;
-
-// document.getElementById("booking-list").innerHTML = ticket;
-
-// showSection("bookings");
-
-// }
-
-
-
-// function checkPNR(){
-
-// var pnr = document.getElementById("pnr-number").value;
-
-// document.getElementById("pnr-result").innerHTML =
-// "PNR: " + pnr + "<br>Status: Confirmed";
-
-// }
 // Array to store bookings
 let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
 // Show Sections
 function showSection(section){
 
-    document.getElementById("home").style.display="none";
-    document.getElementById("search").style.display="none";
-    document.getElementById("pnr").style.display="none";
-    document.getElementById("bookings").style.display="none";
+document.getElementById("home").style.display="none";
+document.getElementById("search").style.display="none";
+document.getElementById("pnr").style.display="none";
+document.getElementById("bookings").style.display="none";
 document.getElementById("login").style.display="none";
 document.getElementById("register").style.display="none";
 document.getElementById("contact").style.display="none";
