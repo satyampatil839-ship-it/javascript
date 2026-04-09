@@ -111,6 +111,7 @@ button{
 #train-result,
 #pnr-result,
 #booking-list{
+    color:black;
 margin-top:20px;
 background:white;
 padding:15px;
@@ -134,4 +135,44 @@ box-shadow:0 0 5px gray;
     padding: 10px;
 
     font-size: 14px;
+}
+.contact-box{
+    width: 80%;
+    margin: 40px auto;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.9);
+    color: black;
+
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    text-align: left;
+    line-height: 1.6;
+}
+
+.contact-box h2{
+    background: #003566;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-box h3{
+    margin-top: 20px;
+    color: #001d3d;
+}
+
+.contact-box a{
+    color: blue;
+    text-decoration: underline;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img{
+    width: 80px;   /* adjust size */
+    height: 40px;
 }
