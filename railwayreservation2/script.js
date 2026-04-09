@@ -1,45 +1,139 @@
-// Mock database of trains
-const trains = [
-    { id: 101, name: "Rajdhani Express", from: "Mumbai", to: "Delhi", time: "16:00" },
-    { id: 102, name: "Duronto Express", from: "Mumbai", to: "Delhi", time: "23:00" },
-    { id: 103, name: "Shatabdi Express", from: "Pune", to: "Mumbai", time: "06:00" },
-    { id: 104, name: "Garib Rath", from: "Delhi", to: "Mumbai", time: "10:00" }
-];
+// function showSection(section){
 
-function searchTrains() {
-    const fromInput = document.getElementById('from').value.trim();
-    const toInput = document.getElementById('to').value.trim();
-    const listContainer = document.getElementById('train-list');
-    
-    // Filter trains based on input
-    const filtered = trains.filter(t => 
-        t.from.toLowerCase() === fromInput.toLowerCase() && 
-        t.to.toLowerCase() === toInput.toLowerCase()
-    );
+// document.getElementById("home").style.display="none";
+// document.getElementById("search").style.display="none";
+// document.getElementById("pnr").style.display="none";
+// document.getElementById("bookings").style.display="none";
 
-    // Clear previous results
-    listContainer.innerHTML = "";
+// document.getElementById(section).style.display="block";
 
-    if (filtered.length === 0) {
-        listContainer.innerHTML = "<p>No trains found for this route.</p>";
+// }
+
+
+
+// function bookTicket(){
+
+// var from = document.getElementById("from").value;
+// var to = document.getElementById("to").value;
+// var date = document.getElementById("date").value;
+// var train = document.getElementById("train").value;
+
+// var ticket =
+// "<h3>Ticket Confirmed</h3>" +
+// "From: " + from + "<br>" +
+// "To: " + to + "<br>" +
+// "Train: " + train + "<br>" +
+// "Date: " + date;
+
+// document.getElementById("booking-list").innerHTML = ticket;
+
+// showSection("bookings");
+
+// }
+
+
+
+// function checkPNR(){
+
+// var pnr = document.getElementById("pnr-number").value;
+
+// document.getElementById("pnr-result").innerHTML =
+// "PNR: " + pnr + "<br>Status: Confirmed";
+
+// }
+// Array to store bookings
+let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+
+// Show Sections
+function showSection(section){
+
+    document.getElementById("home").style.display="none";
+    document.getElementById("search").style.display="none";
+    document.getElementById("pnr").style.display="none";
+    document.getElementById("bookings").style.display="none";
+
+    document.getElementById(section).style.display="block";
+
+    // If bookings page → refresh list
+    if(section === "bookings"){
+        displayBookings();
+    }
+}
+
+
+// Book Ticket
+function bookTicket(){
+
+    var from = document.getElementById("from").value;
+    var to = document.getElementById("to").value;
+    var date = document.getElementById("date").value;
+    var train = document.getElementById("train").value;
+
+    // Simple validation
+    if(from === "" || to === "" || date === ""){
+        alert("Please fill all details!");
         return;
     }
 
-    // Generate HTML for each train found
-    filtered.forEach(train => {
-        const card = document.createElement('div');
-        card.className = 'train-card';
-        card.innerHTML = `
-            <div class="train-info">
-                <h4>${train.name} (#${train.id})</h4>
-                <p>Departure: ${train.time} | Route: ${train.from} to ${train.to}</p>
+    // Create booking object
+    let booking = {
+        from: from,
+        to: to,
+        date: date,
+        train: train,
+        pnr: Math.floor(Math.random() * 1000000) // random PNR
+    };
+
+    // Add to array
+    bookings.push(booking);
+
+    // Save to localStorage
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    // Go to bookings page
+    showSection("bookings");
+}
+
+
+// Display all bookings
+function displayBookings(){
+
+    let list = document.getElementById("booking-list");
+    list.innerHTML = "";
+
+    if(bookings.length === 0){
+        list.innerHTML = "<p>No bookings yet</p>";
+        return;
+    }
+
+    bookings.forEach((b, index) => {
+        list.innerHTML += `
+            <div class="card">
+                <h3>Ticket ${index + 1}</h3>
+                From: ${b.from} <br>
+                To: ${b.to} <br>
+                Train: ${b.train} <br>
+                Date: ${b.date} <br>
+                PNR: ${b.pnr}
             </div>
-            <button onclick="bookTicket('${train.name}')">Book Now</button>
         `;
-        listContainer.appendChild(card);
     });
 }
 
-function bookTicket(trainName) {
-    alert(`Success! Your seat in ${trainName} has been reserved.`);
+
+// Check PNR
+function checkPNR(){
+
+    var pnr = document.getElementById("pnr-number").value;
+
+    let result = bookings.find(b => b.pnr == pnr);
+
+    if(result){
+        document.getElementById("pnr-result").innerHTML =
+        `PNR: ${pnr} <br>Status: Confirmed <br>
+         From: ${result.from} → To: ${result.to}`;
+    } else {
+        document.getElementById("pnr-result").innerHTML =
+        "PNR not found!";
+    }
 }

@@ -1,0 +1,95 @@
+body{
+font-family: Arial;
+margin:0;
+background-color: antiquewhite;
+background-image: url("https://www.worldbank.org/content/dam/wbr/TAI/Seibu_Railway_30000.jpg");
+  background-size: cover;        /* full screen */
+    background-position: center;   /* center image */
+    background-repeat: no-repeat;  /* no repeat */
+    height: 100vh;
+}
+
+/* navbar */
+
+.navbar{
+background:#0077b6;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+}
+
+.menu button{
+margin:5px;
+padding:8px;
+border:black;
+cursor:pointer;
+}
+
+/* sections */
+
+.section{
+padding:30px;
+text-align:center;
+background-color: aquamarine;
+}
+
+/* features */
+
+.features{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:aqua;
+padding:20px;
+width:150px;
+box-shadow:0 0 5px gray;
+}
+
+/* inputs */
+
+input,select{
+display:block;
+margin:10px auto;
+padding:8px;
+width:250px;
+}
+
+button{
+padding:10px;
+background:#0077b6;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+#train-result,
+#pnr-result,
+#booking-list{
+margin-top:20px;
+background:white;
+padding:15px;
+width:300px;
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 0 5px gray;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    text-align: center;
+    padding: 10px;
+
+    font-size: 14px;
+}
