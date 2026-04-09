@@ -1,5 +1,5 @@
 body{
-font-family: Arial;
+ font-family: 'Poppins', sans-serif;
 margin:0;
 background-color: antiquewhite;
 background-image: url("https://www.worldbank.org/content/dam/wbr/TAI/Seibu_Railway_30000.jpg");
@@ -22,21 +22,21 @@ align-items:flex-start;
 
 .menu button{
 margin:5px;
-padding:8px;
+   padding: 12px 20px;   /* increase size */
+    font-size: 16px;      /* increase text size */
 border:black;
 cursor:pointer;
+font: size 30px;
 }
 
 /* sections */
 #home h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 #home p{
-    font-size: 30px;
+    font-size: 20px;
 }
-.navbar h2{
 
-}
 .section{
 padding:30px;
 text-align:center;
@@ -57,9 +57,11 @@ margin-top:20px;
 
 .card{
 background:aqua;
+
 padding:20px;
 width:150px;
-box-shadow:0 0 5px gray;
+box-shadow:0 0 5px black ;
+font-style: ;
 }
 
 /* inputs */

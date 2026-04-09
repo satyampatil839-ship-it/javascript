@@ -2,106 +2,114 @@
 <html>
 <head>
     <title>RailReserve</title>
-    <link rel="stylesheet" href="style3.css">
-</head>
-
-<body>
-
-<!-- Navbar -->
-<div class="navbar">
-    <h2>RailReservation</h2>
-
-    <div class="menu">
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('search')">Search Trains</button>
-        <button onclick="showSection('pnr')">PNR Status</button>
-        <button onclick="showSection('bookings')">My Bookings</button>
-    </div>
-</div>
-
-
-<!-- Home Section -->
-<div id="home" class="section">
-    <h1 style="color: brown;">Book Train Tickets Easily</h1>
-    <p style="color: blueviolet;">Simple Railway Reservation System</p>
-
-    <button onclick="showSection('search')">Book Now</button>
-
-    <div class="features">
-
-        <div class="card">
-            <h3>Search Trains</h3>
-            <p>Find trains quickly</p>
-        </div>
-
-        <div class="card">
-            <h3>Book Ticket</h3>
-            <p>Instant booking</p>
-        </div>
-
-        <div class="card">
-            <h3>PNR Status</h3>
-            <p>Check ticket status</p>
-        </div>
-
-    </div>
-</div>
-
-
-
-<!-- Search Section -->
-<div id="search" class="section" style="display:none">
-
-<h2>Search Trains</h2>
-
-<input type="text" id="from" placeholder="From Station">
-<input type="text" id="to" placeholder="To Station">
-
-<input type="date" id="date">
-
-<select id="train">
-<option>Rajdhani Express</option>
-<option>Shatabdi Express</option>
-<option>Duronto Express</option>
-</select>
-
-<button onclick="bookTicket()">Book Ticket</button>
-
-<div id="train-result"></div>
-
-</div>
-
-
-
-<!-- PNR Section -->
-<div id="pnr" class="section" style="display:none">
-
-<h2>Check PNR Status</h2>
-
-<input type="text" id="pnr-number" placeholder="Enter PNR number">
-
-<button onclick="checkPNR()">Check</button>
-
-<div id="pnr-result"></div>
-
-</div>
-
-
-
-<!-- Bookings Section -->
-<div id="bookings" class="section" style="display:none">
-
-<h2>My Bookings</h2>
-
-<div id="booking-list"></div>
-
-</div>
-
-
-<script src="script.js"></script>
-<footer class="footer">
-    <p>© 2026 RailReservation. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
+        <link rel="stylesheet" href="style3.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        </head>
+        
+        <body>
+        
+        <!-- Navbar -->
+        <div class="navbar">
+            <h2>RailReservation</h2>
+            
+                <div class="menu">
+                        <button onclick="showSection('home')">
+                                <i class="fas fa-home"></i>
+                                 Home</button>
+                                <button onclick="showSection('search')">
+                                    <i class="fas fa-train"></i>
+                                    Search Trains</button>
+                                        <button onclick="showSection('pnr')">
+                                            <i class="fas fa-ticket"></i>PNR Status</button>
+                                                <button onclick="showSection('bookings')">
+                                                    <i class="fas fa-list"></i>My Bookings</button>
+                                                    </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <!-- Home Section -->
+                                                    <div id="home" class="section">
+                                                        <h1 style="color: orange;">Book Train Tickets Easily</h1>
+                                                            <p style="color: blueviolet;">Simple Railway Reservation System</p>
+                                                            
+                                                                <button onclick="showSection('search')">Book Now</button>
+                                                                
+                                                                    <div class="features">
+                                                                    
+                                                                            <div class="card">
+                                                                                        <h3>Search Trains</h3>
+                                                                                                    <p>Find trains quickly</p>
+                                                                                                            </div>
+                                                                                                            
+                                                                                                                    <div class="card">
+                                                                                                                                <h3>Book Ticket</h3>
+                                                                                                                                            <p>Instant booking</p>
+                                                                                                                                                    </div>
+                                                                                                                                                    
+                                                                                                                                                            <div class="card">
+                                                                                                                                                                        <h3>PNR Status</h3>
+                                                                                                                                                                                    <p>Check ticket status</p>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                <!-- Search Section -->
+                                                                                                                                                                                                <div id="search" class="section" style="display:none">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <h2>Search Trains</h2>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <input type="text" id="from" placeholder="From Station">
+                                                                                                                                                                                                <input type="text" id="to" placeholder="To Station">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <input type="date" id="date">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <select id="train">
+                                                                                                                                                                                                <option>Rajdhani Express</option>
+                                                                                                                                                                                                <option>Shatabdi Express</option>
+                                                                                                                                                                                                <option>Duronto Express</option>
+                                                                                                                                                                                                </select>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <button onclick="bookTicket()">Book Ticket</button>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div id="train-result"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                <!-- PNR Section -->
+                                                                                                                                                                                                <div id="pnr" class="section" style="display:none">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <h2>Check PNR Status</h2>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <input type="text" id="pnr-number" placeholder="Enter PNR number">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <button onclick="checkPNR()">Check</button>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div id="pnr-result"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                <!-- Bookings Section -->
+                                                                                                                                                                                                <div id="bookings" class="section" style="display:none">
+                                                                                                                                                                                                
+                                                                                                                                                                                                <h2>My Bookings</h2>
+                                                                                                                                                                                                
+                                                                                                                                                                                                <div id="booking-list"></div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                <script src="script.js"></script>
+                                                                                                                                                                                                <footer class="footer">
+                                                                                                                                                                                                    <p>© 2026 RailReservation. All Rights Reserved.</p>
+                                                                                                                                                                                                    </footer>
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                    </html>>
