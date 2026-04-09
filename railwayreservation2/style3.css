@@ -28,11 +28,22 @@ cursor:pointer;
 }
 
 /* sections */
+#home h1{
+    font-size: 50px;
+}
+#home p{
+    font-size: 30px;
+}
+.navbar h2{
 
+}
 .section{
 padding:30px;
 text-align:center;
-background-color: aquamarine;
+/* background-color: aquamarine; */
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+color: white;
 }
 
 /* features */
@@ -79,6 +90,8 @@ margin-left:auto;
 margin-right:auto;
 box-shadow:0 0 5px gray;
 }
+
+
 
 .footer {
     position: fixed;
