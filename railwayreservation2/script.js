@@ -76,6 +76,9 @@ function displayBookings(){
                 Train: ${b.train} <br>
                 Date: ${b.date} <br>
                 PNR: ${b.pnr}
+                <button onclick="cancelTicket(${index})">
+                    Cancel Ticket
+                </button>
             </div>
         `;
     });
@@ -140,4 +143,20 @@ function registerUser(){
     document.getElementById("register-result").innerHTML =
     "Registration Successful! Now login.";
 
+}
+function cancelTicket(index){
+
+    // Confirm before deleting
+    let confirmDelete = confirm("Are you sure you want to cancel this ticket?");
+
+    if(!confirmDelete) return;
+
+    // Remove ticket from array
+    bookings.splice(index, 1);
+
+    // Update localStorage
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    // Refresh UI
+    displayBookings();
 }
