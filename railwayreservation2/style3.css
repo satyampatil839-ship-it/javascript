@@ -39,9 +39,9 @@ align-items:flex-start;
 margin:5px;
    padding: 12px 20px;   /* increase size */
     font-size: 16px;      /* increase text size */
-border:black;
+border:1px solid black;
 cursor:pointer;
-font: size 30px;
+font-size: 15px;
 }
 
 /* sections */
@@ -57,7 +57,7 @@ padding:30px;
 text-align:center;
 /* background-color: aquamarine; */
 background: rgba(255,255,255,0.2);
-backdrop-filter: blur(10px);
+backdrop-filter: blur(5px);
 color: white;
 }
 
@@ -76,7 +76,6 @@ color:black;
 padding:20px;
 width:150px;
 box-shadow:0 0 5px black ;
-font-style: ;
 }
 
 /* inputs */
@@ -84,7 +83,7 @@ font-style: ;
 input, select{
     display: block;
     width: 50%;
-        margin: 10px auto;         /* center horizontally */
+ margin: 10px auto;         /* center horizontally */
 
     padding: 12px;
 
@@ -114,7 +113,7 @@ button{
     border-radius: 8px;
 
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
 
 }
 
@@ -124,6 +123,7 @@ button{
     color:black;
 margin-top:20px;
 background:white;
+border: 10px solid black;
 padding:15px;
 width:300px;
 margin-left:auto;
@@ -198,7 +198,7 @@ box-shadow:0 0 5px gray;
     color: black;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 10px rgba(255,0,0,0.3);
 }
 
 .holiday-card img{
@@ -213,4 +213,7 @@ box-shadow:0 0 5px gray;
 
 .holiday-card p{
     margin: 10px;
+}
+#home button{
+    cursor: pointer;
 }
