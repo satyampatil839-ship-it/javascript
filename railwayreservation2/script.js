@@ -12,8 +12,7 @@ document.getElementById("bookings").style.display="none";
 document.getElementById("login").style.display="none";
 document.getElementById("register").style.display="none";
 document.getElementById("contact").style.display="none";
-
-    document.getElementById(section).style.display="block";
+document.getElementById(section).style.display="block";
 
     // If bookings page → refresh list
     if(section === "bookings"){
@@ -30,7 +29,15 @@ function bookTicket(){
     var date = document.getElementById("date").value;
     var train = document.getElementById("train").value;
 
-    // Simple validation
+var ticket =
+"<h3>Ticket Confirmed</h3>" +
+"From: " + from + "<br>" +
+"To: " + to + "<br>" +
+"Train: " + train + "<br>" +
+"Date: " + date;
+
+document.getElementById("train-result").innerHTML = ticket;
+
     if(from === "" || to === "" || date === ""){
         alert("Please fill all details!");
         return;
@@ -48,17 +55,15 @@ function bookTicket(){
     // Add to array
     bookings.push(booking);
 
-    // Save to localStorage
+
     localStorage.setItem("bookings", JSON.stringify(bookings));
 
-    // Go to bookings page
     showSection("bookings");
 }
 
 
 // Display all bookings
 function displayBookings(){
-
     let list = document.getElementById("booking-list");
     list.innerHTML = "";
 
