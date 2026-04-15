@@ -20,6 +20,11 @@ body{
 }
 
 /* navbar */
+#booking-list{
+    display: flex;
+flex-direction: row;
+width: 800px;
+}
 
 .navbar{
 background:#0077b6;

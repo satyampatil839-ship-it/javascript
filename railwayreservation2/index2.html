@@ -73,8 +73,22 @@
 
         <h2 style="color:black">Search Trains</h2>
 
-        <input type="text" id="from" placeholder="From Station">
-        <input type="text" id="to" placeholder="To Station">
+<input list="stations" id="from" class="form-control" placeholder="From Station">
+
+<input list="stations" id="to" class="form-control" placeholder="To Station">
+
+<datalist id="stations">
+  <option value="Bhopal">
+  <option value="Indore">
+  <option value="Delhi">
+  <option value="Mumbai">
+  <option value="Pune">
+  <option value="Nagpur">
+  <option value="Hyderabad">
+  <option value="Chennai">
+  <option value="Kolkata">
+</datalist>
+       
 
         <input type="date" id="date">
 
@@ -97,7 +111,40 @@
 
     </div>
 
+<!-- Passenger Details Section -->
+<div id="passenger" class="section" style="display:none">
 
+    <h2 style="color:black">Enter Passenger Details</h2>
+
+    <input type="text" id="pname" placeholder="Passenger Name">
+    <input type="number" id="page" placeholder="Age">
+
+    <select id="pgender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <select id="pberth">
+        <option value="">Berth Preference</option>
+        <option>Lower</option>
+        <option>Middle</option>
+        <option>Upper</option>
+        <option>Side Lower</option>
+        <option>Side Upper</option>
+    </select>
+
+    <select id="pclass">
+        <option value="">Class</option>
+        <option>Sleeper</option>
+        <option>3A</option>
+        <option>2A</option>
+        <option>1A</option>
+    </select>
+
+    <button onclick="confirmBooking()">Proceed to Book</button>
+
+</div>
 
     <!-- PNR Section -->
     <div id="pnr" class="section" style="display:none">

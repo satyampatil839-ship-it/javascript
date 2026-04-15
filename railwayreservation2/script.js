@@ -2,7 +2,7 @@
 // Array to store bookings
 let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-// Show Sections
+
 function showSection(section){
 
 document.getElementById("home").style.display="none";
@@ -12,16 +12,18 @@ document.getElementById("bookings").style.display="none";
 document.getElementById("login").style.display="none";
 document.getElementById("register").style.display="none";
 document.getElementById("contact").style.display="none";
-document.getElementById(section).style.display="block";
+document.getElementById("passenger").style.display="none"; 
 
-    // If bookings page → refresh list
+  document.getElementById(section).style.display = "block";
+
+
     if(section === "bookings"){
-        displayBookings();
+        displayBookings(); // refresh bookings list
     }
 }
 
+let tempBooking = {};
 
-// Book Ticket
 function bookTicket(){
 
     var from = document.getElementById("from").value;
@@ -29,39 +31,20 @@ function bookTicket(){
     var date = document.getElementById("date").value;
     var train = document.getElementById("train").value;
 
-var ticket =
-"<h3>Ticket Confirmed</h3>" +
-"From: " + from + "<br>" +
-"To: " + to + "<br>" +
-"Train: " + train + "<br>" +
-"Date: " + date;
-
-document.getElementById("train-result").innerHTML = ticket;
-
     if(from === "" || to === "" || date === ""){
         alert("Please fill all details!");
         return;
     }
 
-    // Create booking object
-    let booking = {
-        from: from,
-        to: to,
-        date: date,
-        train: train,
-        pnr: Math.floor(Math.random() * 1000000) // random PNR
-    };
+    if(from === to){
+        alert("From and To cannot be same");
+        return;
+    }
 
-    // Add to array
-    bookings.push(booking);
+    tempBooking = { from, to, date, train };
 
-
-    localStorage.setItem("bookings", JSON.stringify(bookings));
-
-    showSection("bookings");
+    showSection("passenger");
 }
-
-
 // Display all bookings
 function displayBookings(){
     let list = document.getElementById("booking-list");
@@ -73,19 +56,29 @@ function displayBookings(){
     }
 
     bookings.forEach((b, index) => {
-        list.innerHTML += `
-            <div class="card">
-                <h3>Ticket ${index + 1}</h3>
-                From: ${b.from} <br>
-                To: ${b.to} <br>
-                Train: ${b.train} <br>
-                Date: ${b.date} <br>
-                PNR: ${b.pnr}
-                <button onclick="cancelTicket(${index})">
-                    Cancel Ticket
-                </button>
-            </div>
-        `;
+       list.innerHTML += `
+    <div class="card">
+        <h3>Ticket ${index + 1}</h3>
+
+        <b>PNR:</b> ${b.pnr} <br>
+        <b>Name:</b> ${b.name} <br>
+        <b>Age:</b> ${b.age} <br>
+        <b>Gender:</b> ${b.gender} <br>
+
+        <b>From:</b> ${b.from} <br>
+        <b>To:</b> ${b.to} <br>
+        <b>Train:</b> ${b.train} <br>
+        <b>Date:</b> ${b.date} <br>
+
+        <b>Class:</b> ${b.class} <br>
+        <b>Berth:</b> ${b.berth} <br>
+
+        <button onclick="cancelTicket(${index})">
+            Cancel Ticket
+        </button>
+    </div>
+`;
+        
     });
 }
 
@@ -164,4 +157,34 @@ function cancelTicket(index){
 
     // Refresh UI
     displayBookings();
+}
+function confirmBooking(){
+
+    let name = document.getElementById("pname").value;
+    let age = document.getElementById("page").value;
+    let gender = document.getElementById("pgender").value;
+    let berth = document.getElementById("pberth").value;
+    let travelClass = document.getElementById("pclass").value;
+
+    if(name === "" || age === "" || gender === "" || berth === "" || travelClass === ""){
+        alert("Please fill all passenger details!");
+        return;
+    }
+
+    let booking = {
+        ...tempBooking,
+        name,
+        age,
+        gender,
+        berth,
+        class: travelClass,
+        pnr: Math.floor(100000 + Math.random() * 900000)
+    };
+
+    bookings.push(booking);
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+
+    alert("✅ Ticket Booked Successfully!");
+
+    showSection("bookings");
 }
