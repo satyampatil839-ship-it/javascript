@@ -228,11 +228,10 @@ box-shadow:0 0 5px gray;
     padding: 30px;
 }
 
-/* Main Title */
 .main-title {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 800;
-    color:orangered; /* Bootstrap blue */
+    color:orangered;
     letter-spacing: 1px;
     text-shadow: 0px 4px 15px rgba(0,0,0,0.2);
 }
