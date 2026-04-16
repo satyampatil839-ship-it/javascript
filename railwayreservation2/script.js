@@ -155,7 +155,8 @@ function cancelTicket(index){
     // Update localStorage
     localStorage.setItem("bookings", JSON.stringify(bookings));
 
-    // Refresh UI
+   
+    
     displayBookings();
 }
 
@@ -185,6 +186,7 @@ function confirmBooking(){
     };
 
     bookings.push(booking);
+
     localStorage.setItem("bookings", JSON.stringify(bookings));
 
     alert("✅ Ticket Booked Successfully!");
