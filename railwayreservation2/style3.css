@@ -222,3 +222,36 @@ box-shadow:0 0 5px gray;
 #home button{
     cursor: pointer;
 }
+.hero {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px;
+}
+
+/* Main Title */
+.main-title {
+    font-size: 50px;
+    font-weight: 800;
+    color:orangered; /* Bootstrap blue */
+    letter-spacing: 1px;
+    text-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Subtitle */
+.sub-title {
+    font-size: 22px;
+    color: #444;
+    margin-top: 12px;
+}
+
+/* Glass Effect Card */
+.hero {
+    width: 60%;
+    margin: 60px auto;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}

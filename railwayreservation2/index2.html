@@ -9,283 +9,289 @@
 </head>
 
 <body>
-<div class="main-content">
+    <div class="main-content">
 
-    <!-- Navbar -->
-    <div class="navbar">
-       <div class="logo">
-    <img src="data:image/png;base64,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" alt="logo">
-    <h2>RailReservation</h2>
-</div>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="data:image/png;base64,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"
+                    alt="logo">
+                <h2>RailReservation</h2>
+            </div>
 
-        <div class="menu">
-            <button onclick="showSection('home')">
-                <i class="fas fa-home"></i>
-                Home</button>
+            <div class="menu">
+                <button onclick="showSection('home')">
+                    <i class="fas fa-home"></i>
+                    Home</button>
                 <button onclick="showSection('register')">
-                                <i class="fas fa-register"></i>    Register</button>
+                    <i class="fas fa-register"></i> Register</button>
                 <button onclick="showSection('login')">
-                                    <i class="fas fa-login"></i>Login</button>
-            <button onclick="showSection('search')">
+                    <i class="fas fa-login"></i>Login</button>
+                <button onclick="showSection('search')">
 
-                <i class="fas fa-train"></i>
-                Search Trains</button>
-            <button onclick="showSection('pnr')">
-                <i class="fas fa-ticket"></i>PNR Status</button>
-            <button onclick="showSection('bookings')">
-                <i class="fas fa-list"></i>My Bookings</button>
+                    <i class="fas fa-train"></i>
+                    Search Trains</button>
+                <button onclick="showSection('pnr')">
+                    <i class="fas fa-ticket"></i>PNR Status</button>
+                <button onclick="showSection('bookings')">
+                    <i class="fas fa-list"></i>My Bookings</button>
                 <button onclick="showSection('contact')">Contact Us</button>
+            </div>
+        </div>
+
+
+        <!-- Home Section -->
+        <div id="home" class="section">
+<div class="hero">
+    <h1 class="main-title">🚆 Book Train Tickets Easily</h1>
+    <p class="sub-title">Fast • Secure • Simple Railway Reservation System</p>
+</div>
+
+            <button onclick="showSection('search')">Book Now</button>
+
+            <div class="features">
+
+                <div class="card">
+                    <h3>Search Trains</h3>
+                    <p>Find trains quickly</p>
+                </div>
+
+                <div class="card">
+                    <h3>Book Ticket</h3>
+                    <p>Instant booking</p>
+                </div>
+
+                <div class="card">
+                    <h3>PNR Status</h3>
+                    <p>Check ticket status</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Search Section -->
+        <div id="search" class="section" style="display:none">
+
+            <h2 style="color:black">Search Trains</h2>
+
+            <input list="stations" id="from" class="form-control" placeholder="From Station">
+
+            <input list="stations" id="to" class="form-control" placeholder="To Station">
+
+            <datalist id="stations">
+                <option value="Bhopal">
+                <option value="Indore">
+                <option value="Delhi">
+                <option value="Mumbai">
+                <option value="Pune">
+                <option value="Nagpur">
+                <option value="Hyderabad">
+                <option value="Chennai">
+                <option value="Kolkata">
+            </datalist>
+
+
+            <input type="date" id="date">
+
+            <select id="train">
+                <option>Rajdhani Express</option>
+                <option>Shatabdi Express</option>
+                <option>Duronto Express</option>
+                <option>Tejas Express</option>
+                <option>Sachkhand Express</option>
+                <option>Gatimaan Express</option>
+                <option>Vande Bharat Express</option>
+                <option>Humsafar Express</option>
+                <option>Jan Shatabdi Express</option>
+
+            </select>
+
+            <button onclick="bookTicket()">Book Ticket</button>
+
+            <div id="train-result"></div>
+
+        </div>
+
+        <!-- Passenger Details Section -->
+        <div id="passenger" class="section" style="display:none">
+
+            <h2 style="color:black">Enter Passenger Details</h2>
+
+            <input type="text" id="pname" placeholder="Passenger Name">
+            <input type="number" id="page" placeholder="Age">
+
+            <select id="pgender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <select id="pberth">
+                <option value="">Berth Preference</option>
+                <option>Lower</option>
+                <option>Middle</option>
+                <option>Upper</option>
+                <option>Side Lower</option>
+                <option>Side Upper</option>
+            </select>
+
+            <select id="pclass">
+                <option value="">Class</option>
+                <option>Sleeper</option>
+                <option>3A</option>
+                <option>2A</option>
+                <option>1A</option>
+            </select>
+
+            <button onclick="confirmBooking()">Proceed to Book</button>
+
+        </div>
+
+        <!-- PNR Section -->
+        <div id="pnr" class="section" style="display:none">
+
+            <h2 style="color:black">Check PNR Status</h2>
+
+            <input type="text" id="pnr-number" placeholder="Enter PNR number">
+
+            <button onclick="checkPNR()">Check</button>
+
+            <div id="pnr-result"></div>
+
+        </div>
+
+
+
+        <!-- Bookings Section -->
+        <div id="bookings" class="section" style="display:none">
+
+            <h2 style="color:black">My Bookings</h2>
+
+            <div id="booking-list"></div>
+
+        </div>
+
+        <div id="login" class="section" style="display:none">
+
+            <h2 style="color:black">Login</h2>
+
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+
+            <button onclick="loginUser()">Login</button>
+
+            <p id="login-result"></p>
+
+        </div>
+
+        <div id="register" class="section" style="display:none">
+
+            <h2 style="color:black">Register</h2>
+
+            <input type="text" id="reg-username" placeholder="Username">
+            <input type="password" id="reg-password" placeholder="Password">
+
+            <button onclick="registerUser()">Register</button>
+
+            <p id="register-result"></p>
+
+        </div>
+        <div id="contact" class="section" style="display:none">
+
+            <div class="contact-box">
+
+                <h2>You may contact us</h2>
+
+                <h3>For Any Queries Related to Railway Tickets Booked via IRCTC</h3>
+
+                <p><b>Customer Support:</b></p>
+
+                <p>
+                    Customers can now submit and track queries through:
+                    <br>
+                    <a href="https://equery.irctc.co.in/" target="_blank">
+                        https://equery.irctc.co.in/
+                    </a>
+                </p>
+
+                <p>
+                    For cancellation or TDR issues:
+                    <br>
+                    <a href="mailto:etickets@irctc.co.in">
+                        etickets@irctc.co.in
+                    </a>
+                </p>
+
+                <p>📞 <b>Dial 14646 (Within India)</b></p>
+
+                <p>
+                    Support languages:
+                    Hindi, English, Marathi, Tamil, Telugu, etc.
+                </p>
+
+                <p><b>Outside India:</b></p>
+
+                <p>
+                    📞 <a href="#">+91-8044647999</a> |
+                    <a href="#">+91-8035734999</a>
+                </p>
+
+                <hr>
+
+                <h3>IRCTC Loyalty Credit Card</h3>
+
+                <p><b>Card:</b> IRCTC-SBI</p>
+
+                <p>
+                    📞 <a href="#">0124-39021212</a> |
+                    <a href="#">18001801295</a>
+                </p>
+
+                <p>
+                    📧 <a href="mailto:customercare@sbicard.com">
+                        customercare@sbicard.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+        <div class="holidays section">
+
+            <h2>Holiday Packages</h2>
+
+            <div class="holiday-cards">
+
+                <div class="holiday-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHlPH1Jb5k4AZH6xnjJ7BOsiYceLLkyTJ1Q&s">
+                    <h3>Goa Tour</h3>
+                    <p>3 Nights / 4 Days</p>
+                    <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
+                </div>
+
+                <div class="holiday-card">
+                    <img
+                        src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCity%2FDal-Lake.png&w=3840&q=90">
+                    <h3>Kashmir Tour</h3>
+                    <p>5 Nights / 6 Days</p>
+                    <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
+                </div>
+
+                <div class="holiday-card">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATzHJlrIsW_N1XcIMghz-7cMx6DGwAL55yw&s">
+                    <h3>Manali Trip</h3>
+                    <p>4 Nights / 5 Days</p>
+                    <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
+                </div>
+
+            </div>
+
         </div>
     </div>
-
-
-    <!-- Home Section -->
-    <div id="home" class="section">
-        <h1 style="color: orange;">Book Train Tickets Easily</h1>
-        <p style="color: black;">Simple Railway Reservation System</p>
-
-        <button onclick="showSection('search')">Book Now</button>
-
-        <div class="features">
-
-            <div class="card">
-                <h3>Search Trains</h3>
-                <p>Find trains quickly</p>
-            </div>
-
-            <div class="card">
-                <h3>Book Ticket</h3>
-                <p>Instant booking</p>
-            </div>
-
-            <div class="card">
-                <h3>PNR Status</h3>
-                <p>Check ticket status</p>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <!-- Search Section -->
-    <div id="search" class="section" style="display:none">
-
-        <h2 style="color:black">Search Trains</h2>
-
-<input list="stations" id="from" class="form-control" placeholder="From Station">
-
-<input list="stations" id="to" class="form-control" placeholder="To Station">
-
-<datalist id="stations">
-  <option value="Bhopal">
-  <option value="Indore">
-  <option value="Delhi">
-  <option value="Mumbai">
-  <option value="Pune">
-  <option value="Nagpur">
-  <option value="Hyderabad">
-  <option value="Chennai">
-  <option value="Kolkata">
-</datalist>
-       
-
-        <input type="date" id="date">
-
-        <select id="train">
-            <option>Rajdhani Express</option>
-            <option>Shatabdi Express</option>
-            <option>Duronto Express</option>
-            <option>Tejas Express</option>
-            <option>Sachkhand Express</option>
-            <option>Gatimaan Express</option>
-            <option>Vande Bharat Express</option>
-            <option>Humsafar Express</option>
-            <option>Jan Shatabdi Express</option>
-
-        </select>
-
-        <button onclick="bookTicket()">Book Ticket</button>
-
-        <div id="train-result"></div>
-
-    </div>
-
-<!-- Passenger Details Section -->
-<div id="passenger" class="section" style="display:none">
-
-    <h2 style="color:black">Enter Passenger Details</h2>
-
-    <input type="text" id="pname" placeholder="Passenger Name">
-    <input type="number" id="page" placeholder="Age">
-
-    <select id="pgender">
-        <option value="">Select Gender</option>
-        <option>Male</option>
-        <option>Female</option>
-    </select>
-
-    <select id="pberth">
-        <option value="">Berth Preference</option>
-        <option>Lower</option>
-        <option>Middle</option>
-        <option>Upper</option>
-        <option>Side Lower</option>
-        <option>Side Upper</option>
-    </select>
-
-    <select id="pclass">
-        <option value="">Class</option>
-        <option>Sleeper</option>
-        <option>3A</option>
-        <option>2A</option>
-        <option>1A</option>
-    </select>
-
-    <button onclick="confirmBooking()">Proceed to Book</button>
-
-</div>
-
-    <!-- PNR Section -->
-    <div id="pnr" class="section" style="display:none">
-
-        <h2 style="color:black">Check PNR Status</h2>
-
-        <input type="text" id="pnr-number" placeholder="Enter PNR number">
-
-        <button onclick="checkPNR()">Check</button>
-
-        <div id="pnr-result"></div>
-
-    </div>
-
-
-
-    <!-- Bookings Section -->
-    <div id="bookings" class="section" style="display:none">
-
-        <h2 style="color:black">My Bookings</h2>
-
-        <div id="booking-list"></div>
-
-    </div>
-
-<div id="login" class="section" style="display:none">
-
-<h2 style="color:black">Login</h2>
-
-<input type="text" id="login-username" placeholder="Username">
-<input type="password" id="login-password" placeholder="Password">
-
-<button onclick="loginUser()">Login</button>
-
-<p id="login-result"></p>
-
-</div>
-
-<div id="register" class="section" style="display:none">
-
-<h2 style="color:black">Register</h2>
-
-<input type="text" id="reg-username" placeholder="Username">
-<input type="password" id="reg-password" placeholder="Password">
-
-<button onclick="registerUser()">Register</button>
-
-<p id="register-result"></p>
-
-</div>
-<div id="contact" class="section" style="display:none">
-
-<div class="contact-box">
-
-    <h2>You may contact us</h2>
-
-    <h3>For Any Queries Related to Railway Tickets Booked via IRCTC</h3>
-
-    <p><b>Customer Support:</b></p>
-
-    <p>
-        Customers can now submit and track queries through:
-        <br>
-        <a href="https://equery.irctc.co.in/" target="_blank">
-            https://equery.irctc.co.in/
-        </a>
-    </p>
-
-    <p>
-        For cancellation or TDR issues:
-        <br>
-        <a href="mailto:etickets@irctc.co.in">
-            etickets@irctc.co.in
-        </a>
-    </p>
-
-    <p>📞 <b>Dial 14646 (Within India)</b></p>
-
-    <p>
-        Support languages:
-        Hindi, English, Marathi, Tamil, Telugu, etc.
-    </p>
-
-    <p><b>Outside India:</b></p>
-
-    <p>
-        📞 <a href="#">+91-8044647999</a> |
-        <a href="#">+91-8035734999</a>
-    </p>
-
-    <hr>
-
-    <h3>IRCTC Loyalty Credit Card</h3>
-
-    <p><b>Card:</b> IRCTC-SBI</p>
-
-    <p>
-        📞 <a href="#">0124-39021212</a> |
-        <a href="#">18001801295</a>
-    </p>
-
-    <p>
-        📧 <a href="mailto:customercare@sbicard.com">
-        customercare@sbicard.com
-        </a>
-    </p>
-
-</div>
-
-</div>
-<div class="holidays section">
-
-<h2>Holiday Packages</h2>
-
-<div class="holiday-cards">
-
-    <div class="holiday-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHlPH1Jb5k4AZH6xnjJ7BOsiYceLLkyTJ1Q&s">
-        <h3>Goa Tour</h3>
-        <p>3 Nights / 4 Days</p>
-        <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
-    </div>
-
-    <div class="holiday-card">
-        <img src="https://www.flamingotravels.co.in/_next/image?url=https%3A%2F%2Fimgcdn.flamingotravels.co.in%2FImages%2FCity%2FDal-Lake.png&w=3840&q=90">
-        <h3>Kashmir Tour</h3>
-        <p>5 Nights / 6 Days</p>
-          <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
-    </div>
-
-    <div class="holiday-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTATzHJlrIsW_N1XcIMghz-7cMx6DGwAL55yw&s">
-        <h3>Manali Trip</h3>
-        <p>4 Nights / 5 Days</p>
-          <a href="https://www.irctctourism.com/" target="_blank">Read more-></a>
-    </div>
-
-</div>
-
-</div>
-</div>
     <script src="script.js"></script>
     <footer class="footer">
         <p>© 2026 RailReservation. All Rights Reserved.</p>
@@ -293,4 +299,4 @@
 
 </body>
 
-</html>>
+</html>>>

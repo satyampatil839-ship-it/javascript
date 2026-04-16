@@ -158,6 +158,9 @@ function cancelTicket(index){
     // Refresh UI
     displayBookings();
 }
+
+
+
 function confirmBooking(){
 
     let name = document.getElementById("pname").value;
