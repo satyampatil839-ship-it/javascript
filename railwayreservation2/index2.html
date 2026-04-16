@@ -47,8 +47,7 @@
     <p class="sub-title">Fast • Secure • Simple Railway Reservation System</p>
 </div>
 
-            <button onclick="showSection('search')">Book Now</button>
-
+<button class="book-btn" onclick="showSection('search')">Book Now</button>
             <div class="features">
 
                 <div class="card">
@@ -108,9 +107,10 @@
 
             </select>
 
-            <button onclick="bookTicket()">Book Ticket</button>
+            <!-- <button onclick="bookTicket()">Book Ticket</button> -->
+        <button class="book-btn" onclick="bookTicket()">Book Ticket</button>
 
-            <div id="train-result"></div>
+
 
         </div>
 
@@ -145,7 +145,10 @@
                 <option>1A</option>
             </select>
 
-            <button onclick="confirmBooking()">Proceed to Book</button>
+        <button class="book-btn" onclick="confirmBooking()">Proceed to Book</button>
+
+             <div id="train-result"></div>
+
 
         </div>
 

@@ -255,3 +255,27 @@ box-shadow:0 0 5px gray;
 
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
+.book-btn {
+    width: 60%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #0d6efd, #00c6ff);
+    color: white;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover Blow Effect */
+.book-btn:hover {
+    transform: scale(1.1); /* makes it blow up */
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5);
+}
+
+/* Click effect */
+.book-btn:active {
+    transform: scale(0.95);
+}
